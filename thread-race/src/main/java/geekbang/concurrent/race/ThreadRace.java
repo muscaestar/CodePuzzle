@@ -1,12 +1,10 @@
 package geekbang.concurrent.race;
 
-import geekbang.concurrent.race.deprecate.SimplePolicy;
 import geekbang.concurrent.race.superpolicy.SuperPolicy;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
-import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * 线程竞赛
@@ -60,9 +58,9 @@ public class ThreadRace {
 		
 //		SimplePolicy sp = new SimplePolicy();
 		SuperPolicy sp = new SuperPolicy();
-		double totalSimple = sp.go();
+		long totalSimple = sp.go();
 		
-		double rate = totalSimple / totalTime;
+		double rate = totalSimple / (double)totalTime;
 		System.out.println("和基准比较: " + new Double(rate).toString());
 	}
 	

@@ -34,7 +34,7 @@ public class SuperPolicy {
     }
 
 
-    public double go() throws Exception {
+    public long go() throws Exception {
         final ExecutorService genThreadPool = Executors.newFixedThreadPool(genThreadInPool);
 
         //使用方法Super-MR计算
